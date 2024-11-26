@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel 3D - @programador.cs</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-logo">
+            <img src="./img/logo.png" alt="Scorpio Artist Logo" class="logo">
+            <span class="logo-name">Scorpio Artist</span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./tipo_arte.html">Galería de arte</a></li>
+            <li><a href="./formulario.html">Comprar</a></li>
+            <li><a href="./juego.html">Juego</a></li>
+            <li><a href="./datos.html">Datos</a></li>
+            <li><a href="./login.html" class="btn-cerrar-sesion">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+    <section class="borde">
+        <section class="bienvenida">
+            <h1>¡JUEGO DE MEMORIA!</h1>
+        </section>
+
+        <div class="game-container">
+            <div class="game-info">
+                <span class="timer">Tiempo: 60</span>
+                <span class="attempts">Intentos: 0</span>
+            </div>
+        
+            <div class="memory-board" id="memory-board">
+            <!-- Las cartas del juego se generarán aquí mediante JS -->
+            </div>
+
+            <div id="result-message" class="hidden"></div>
+            <button id="retry-btn" class="retry-btn hidden">Reintentar</button>
+        </div>
+    </section>
+    
+    <script src="./script_juego.js"></script>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="img/Logo_AC_2.jpg" alt="Scorpio Artist Logo" class="footer-logo">
+                <p>© 2024 AngelCode98. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-right">
+                <ul class="footer-links">
+                    <li><a href="https://github.com/AngelCode98">| Acerca de |</a></li>
+                    <li><a href="https://www.artradelatam.com/custom-page/terminos-y-condiciones-artista?">| Términos y condiciones |</a></li>
+                    <li><a href="https://www.artradelatam.com/custom-page/terminos-y-condiciones-artista?">| Política de privacidad |</a></li>
+                    <li><a href="https://github.com/AngelCode98">| Contacto |</a></li>
+                    <li><a href="https://github.com/AngelCode98" target="_blank">| GitHub |</a></li>
+                    <li><a href="https://www.linkedin.com/in/luis-%C3%A1ngel-ram%C3%ADrez-ramos-a287b321a/" target="_blank">| LinkedIn |</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel 3D - @programador.cs</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-logo">
+            <img src="./img/logo.png" alt="Scorpio Artist Logo" class="logo">
+            <span class="logo-name">Scorpio Artist</span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./tipo_arte.html">Galería de arte</a></li>
+            <li><a href="./formulario.html">Comprar</a></li>
+            <li><a href="./juego.html">Juego</a></li>
+            <li><a href="./datos.html">Datos</a></li>
+            <li><a href="./login.html" class="btn-cerrar-sesion">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <section class="bienvenida">
+        <h1>Formulario de compra</h1>
+    </section>
+
+    <div class="container_f">
+        <article class="formulario">
+            <p>Por medio de este formulario queremos saber cuál es tu nivel de experiencia sobre el arte.</p>
+            <form action="" method="POST">
+                <div>
+                    <label for="fecha">Fecha en la cual diligencias esta encuesta</label>
+                    <input type="text" id="fecha" class="form-control" readonly>
+                </div>
+                <div>
+                    <label for="cedula">Número de cédula*</label>
+                    <input type="text" id="cedula" name="Cedula" required>
+                </div>
+                <div>
+                    <label for="nombres">Nombres y Apellidos*</label>
+                    <input type="text" id="nombres" name="Nombres y Apellidos" required>
+                </div>
+                <div>
+                    <label for="artista_favorito">¿Cuál es tu artista de pintura favorito?</label>
+                    <textarea name="artista_favorito" rows="2"></textarea>
+                </div>
+                <div>
+                    <label for="obras_favoritas">¿Qué tipo de obras de pinturas artísticas te gustaría coleccionar?</label>
+                    <textarea name="obras_favoritas" rows="2"></textarea>
+                </div>
+                <div>
+                    <label for="tecnica">¿Cuál es tu técnica de pintura favorita?</label>
+                    <select id="tecnica" name="tecnica">
+                        <option value="" disabled selected>Elija una opción</option>
+                        <option value="Acrílica">Acrílica</option>
+                        <option value="Óleo">Óleo</option>
+                        <option value="Acuarela">Acuarela</option>
+                        <option value="Gouache">Gouache</option>
+                        <option value="Aerografía">Aerografía</option>
+                        <option value="Técnica Mixta">Técnica Mixta</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="presupuesto">¿Cuál es tu presupuesto para invertir en una subasta de pintura?</label>
+                    <textarea name="presupuesto" rows="1" placeholder="$ XXX,XXX,XXX"></textarea>
+                </div>
+                <div>
+                    <label for="pintura_favorita">¿Cuál de las pinturas subastadas fue tu favorita?</label>
+                    <textarea name="pintura_favorita" rows="2"></textarea>
+                </div>
+                <div>
+                    <label for="pintura_comprada">¿Te llevas a casa alguna de nuestras pinturas?</label>
+                    <textarea name="pintura_comprada" rows="2"></textarea>
+                </div>
+                <button type="submit">ENVIAR</button>
+            </form>
+        </article>
+    </div>
+</main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="img/Logo_AC_2.jpg" alt="Scorpio Artist Logo" class="footer-logo">
+                <p>© 2024 AngelCode98. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-right">
+                <ul class="footer-links">
+                    <li><a href="https://github.com/AngelCode98">| Acerca de |</a></li>
+                    <li><a href="https://www.artradelatam.com/custom-page/terminos-y-condiciones-artista?">| Términos y condiciones |</a></li>
+                    <li><a href="https://www.artradelatam.com/custom-page/terminos-y-condiciones-artista?">| Política de privacidad |</a></li>
+                    <li><a href="https://github.com/AngelCode98">| Contacto |</a></li>
+                    <li><a href="https://github.com/AngelCode98" target="_blank">| GitHub |</a></li>
+                    <li><a href="https://www.linkedin.com/in/luis-%C3%A1ngel-ram%C3%ADrez-ramos-a287b321a/" target="_blank">| LinkedIn |</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Obtener la fecha actual y formatearla en dd/mm/yyyy
+        function obtenerFecha() {
+            const fecha = new Date();
+            const dia = String(fecha.getDate()).padStart(2, '0');
+            const mes = String(fecha.getMonth() + 1).padStart(2, '0'); // Los meses empiezan desde 0
+            const anio = fecha.getFullYear();
+            return `${dia}/${mes}/${anio}`;
+        }
+    
+        // Asignar la fecha al campo de fecha
+        document.getElementById('fecha').value = obtenerFecha();
+    </script>
+</body>
+
+</html>
